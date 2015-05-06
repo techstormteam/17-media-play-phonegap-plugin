@@ -1,0 +1,81 @@
+
+<ons-page class="transparent" ng-controller="inputcomment">
+  
+     <ons-toolbar  >    
+    <div class="center">
+{{tran.toolbar_record_samma_arahang}}   </div>
+    
+  </ons-toolbar>
+           <ons-scroller style="height:100%; width: 100%;">
+
+    <div class="welcome2" >
+       
+      
+          <input type="tel" ng-model="times" class="text-input text-input" placeholder="{{tran.num}}"  
+                 style="width:40%;margin:100px auto 0px auto">
+ 
+          <br><br>
+          <div style="border-radius: 10px;
+                border: 2px solid whitesmoke;
+                padding: 20px; 
+                width: 50%;
+                height: auto; 
+                margin:auto;
+                ">
+ <b> "{{tran.samma_arahang}}"<br>{{tran.today}} {{ttimes}} {{tran.times}}</b>           </div>
+      
+                   
+        
+        <ons-button   class="button button--quiet" >
+              
+               <input type="date" id="rdate"
+                     value="{{today1}}"
+                     max="{{today1}}">
+              <input type="time"
+                     id="rtime"
+                     value="{{timenow}}"
+                     max="{{timenow}}">
+
+              <ons-icon
+                    icon="fa-pencil"
+                    fixed-width="false"
+                    style="color: white">
+                </ons-icon> 
+               
+        </ons-button>
+    
+          
+          
+          
+              <br><br> 
+       <div   style="text-align: center;">
+        <ons-button   class="button button--outline"
+                       ng-click="addtimes()"
+                      style="width:80%;border-color: white;background-color: #1284ff;">
+            <ons-icon
+                    icon="fa-save"
+                    fixed-width="false"
+                    style="color: white">
+                </ons-icon>  {{tran.record}}
+        </ons-button>
+          <br><br>
+          <ons-button class="button button--outline"  style="width:80%;border-color: white;" 
+                      onclick="tabbar.loadPage('video.html')"
+                      >
+              <ons-icon
+                    icon="fa-list"
+                    fixed-width="false"
+                    style="color: white">
+                </ons-icon>     <font color="white">{{tran.show}}</font>
+        </ons-button>
+          <br><br>
+        
+          
+      </div>
+    </div> 
+              
+               <br><br>  <br><br>
+               </ons-scroller>
+             <img src="images/bg.png" class="bg">
+
+</ons-page>
