@@ -1,0 +1,45 @@
+<ons-page ng-controller="viewmp3">
+  <ons-toolbar>
+         
+    <div class="center">
+      {{tran.meditation_sound}}
+    </div>
+  </ons-toolbar>
+  <div class="app-page">
+    
+    <ons-scroller style="height:100%; width: 100%;">
+      
+        
+         <ons-list class="plan-list">
+          <ons-list-item modifier="chevron" class="plan" 
+                         ng-repeat="(key,item) in mp3s"
+                         >
+            <ons-row ng-click="showmp3(key)">
+                
+                <input class="hidden" id="rdate-view" value="{{item.name}}">
+
+              <ons-col width="6px" class="plan-center" style="backgroundColor:#3399ff;">
+              </ons-col>
+
+              <ons-col class="plan-right">
+                  <div class="plan-name"> &nbsp; {{ item.name }} </div>
+
+                <div class="plan-info">
+                  <div >
+                    &nbsp; <ons-icon icon="fa-clock-o"></ons-icon>&nbsp; {{ item.duration  }}  {{tran.minutes}}
+                  </div>
+
+                   
+                </div>
+              </ons-col>
+            </ons-row>
+          </ons-list-item>
+
+        </ons-list>
+        
+        
+    </ons-scroller>
+    
+  </div>
+
+</ons-page>

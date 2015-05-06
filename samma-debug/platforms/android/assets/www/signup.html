@@ -1,0 +1,66 @@
+<ons-page ng-controller="signuppage" >
+ <ons-toolbar  >    
+     
+    <div class="center">
+ {{tran.toolbar_signup}}
+    </div>
+    <div class="right">
+      <ons-toolbar-button class="" onclick="tabbar.loadPage('login.html')" >Log in</ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <div class="signup-page">
+   
+
+    <div class="signup-form">
+      <div class="signup-wrapper">
+        <ons-row>
+          <ons-col>
+            <input type="text" id="fname" class="text-input--underbar width-full" placeholder="{{tran.fname}}" value="">
+          </ons-col>
+          <ons-col width="15px"></ons-col>
+          <ons-col>
+            <input type="text"  id="lname" class="text-input--underbar width-full" placeholder="{{tran.lname}}" value="" >
+          </ons-col>
+        </ons-row>
+
+        <ons-row>
+          <ons-col>
+            <input type="text" id="email" class="text-input--underbar width-full" placeholder="Email" value="">
+          </ons-col>
+        </ons-row>
+
+          
+        <ons-row>
+          <ons-col>
+            <input type="password" id="password"  class="text-input--underbar width-full" placeholder="Password" value="">
+          </ons-col>
+        </ons-row>
+
+        <div class="lucent">
+          <p class="note">Password - 6 characters or more</p>
+        </div>
+
+        <ons-row>
+          <ons-col>
+            <ons-button modifier="large"
+                        class="button button--outline" 
+                        style="border-color: white;"
+                        ng-click="dosignup()">{{tran.toolbar_signup}}</ons-button>
+          </ons-col>
+        </ons-row>
+      </div>
+    </div>
+
+    <div class="blur">
+      <img src="images/bg.png" class="bg">
+    </div>
+  </div>
+
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <filter id="blur">
+     <feGaussianBlur stdDeviation="10" />
+     </filter>
+  </svg> 
+
+</ons-page>

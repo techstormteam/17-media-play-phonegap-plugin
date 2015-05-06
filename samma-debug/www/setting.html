@@ -1,0 +1,65 @@
+<ons-page ng-controller="setting">
+  <ons-toolbar>
+    <div class="left">
+    </div>
+    <div class="center">Language Setting</div>
+   
+  </ons-toolbar>
+
+  <div class="app-profile">
+
+    
+ <ons-list-header>Select Language</ons-list-header>
+      <ons-list>
+
+        <ons-list-item modifier="tappable"  ng-click="set_to('th')">
+          <label class="radio-button radio-button--list-item">
+            <input type="radio" name="a" id="th">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+            Thai
+          </label>
+        </ons-list-item>
+
+        <ons-list-item modifier="tappable" ng-click="set_to('en')">
+          <label class="radio-button radio-button--list-item">
+            <input type="radio" name="a" id="en">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+            English
+          </label>
+        </ons-list-item>
+        
+             <ons-list-item modifier="tappable" ng-click="set_to('cn')">
+          <label class="radio-button radio-button--list-item">
+            <input type="radio" name="a" id="cn">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+            Chinese
+          </label>
+        </ons-list-item>
+          
+           <ons-list-item modifier="tappable" ng-click="set_to('jp')">
+          <label class="radio-button radio-button--list-item">
+            <input type="radio" name="a" id="jp">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+            Japanese
+          </label>
+        </ons-list-item>
+          
+  <ons-list-header>Select Language</ons-list-header>
+
+ <ons-list-item modifier="chevron"  align="center"
+                      ng-click="resetdata()">
+                     
+ <ons-icon
+        icon="fa-remove"
+        fixed-width="false"
+        ></ons-icon>
+            {{tran.reset_data}}
+      </ons-list-item>
+      </ons-list>
+
+   
+      
+
+    <br>
+  </div>
+</ons-page>

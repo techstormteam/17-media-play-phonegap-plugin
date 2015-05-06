@@ -1,0 +1,40 @@
+<ons-page  ng-controller="loginpage">
+  <ons-toolbar  >    
+      
+    <div class="center">
+{{tran.connect_to_server}}
+    </div>
+    <div class="right">
+      <ons-toolbar-button class="" onclick="tabbar.loadPage('signup.html')" >Sign Up</ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <div class="details-content login-page">
+   
+
+      <div class="welcome">
+      
+      <div class="login-form">
+        <div class="form-wrapper">
+          <input type="email" class="text-input--underbar width-full"  placeholder="Email or Username" value="" id="email_user">
+          <input type="password" class="text-input--underbar width-full"  placeholder="Password" value="" id="password_user">
+          <br><br>
+          <ons-button modifier="large" class="login-button button--outline" style="border-color: white;"
+                      ng-click="dologin()">
+              <ons-icon
+                    icon="fa-cloud-upload"
+                    fixed-width="false"
+                    style="color: white">
+                </ons-icon>  {{tran.connect}}</ons-button>
+          
+          <ons-button modifier="quiet"  class="forgot-password" onclick="tabbar.loadPage('signup.html')">{{tran.or_signup}}</ons-button>
+          
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blur">
+            <img src="images/bg.png" class="bg">
+        </div>
+</ons-page>

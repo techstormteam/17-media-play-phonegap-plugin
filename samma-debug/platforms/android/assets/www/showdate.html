@@ -1,0 +1,57 @@
+<ons-page ng-controller="viewresult">
+  <ons-toolbar>
+      <div class="left" style="margin-top: 8px;margin-left: 8px;"
+           onclick="tabbar.loadPage('video.html');" >
+    <a  style="color:blue;height: 100%;vertical-align: middle;">< Back</a>
+    </div>
+    <div class="center">
+       {{thdate1}}
+    </div>
+    <div class="right">
+    </div>
+  </ons-toolbar>
+  <div class="app-page">
+    <div style="border-radius: 10px;
+                border: 2px solid buttonface;
+                padding: 10px; 
+                width: 80%;
+                height: 50px; 
+                margin:auto auto auto ;
+                color:black;
+                text-align: center;
+                vertical-align: middle;
+                ">
+              <b>   "{{tran.samma_arahang}}" <br>{{tran.all}} {{sumday}} {{tran.times}}</b> 
+          </div>
+    <ons-scroller style="height:100%; width: 100%;">
+      
+        
+         <ons-list  >
+         
+             
+
+             
+             
+       <ons-list-header><center>{{tran.samma_arahang}}</center></ons-list-header>
+
+        <ons-list-item modifier="tappable"     
+                       ng-repeat="(key,item) in items2">
+          &nbsp; &nbsp; &nbsp; 
+          {{ item.rftimes }} {{tran.times}}
+          <span class="list-item-action pull-right" ng-click="confirm(item.rftimes,item.gkey)">
+            <ons-icon icon="fa-trash-o" size="22px"></ons-icon>
+          </span>
+          <span class="list-item-note lucent pull-right">&nbsp; {{ item.rtime  }}&nbsp; &nbsp; &nbsp; </span>
+          
+        </ons-list-item>
+              
+              
+              
+        </ons-list>
+        
+        
+    </ons-scroller>
+    
+  </div>
+
+</ons-page>

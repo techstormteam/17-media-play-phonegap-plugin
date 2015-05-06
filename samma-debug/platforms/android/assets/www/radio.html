@@ -1,0 +1,52 @@
+
+<ons-navigator animation="slide" var="radioPage">  
+    
+  <ons-page ng-controller="radioController">
+    <ons-toolbar >
+      <div class="left">
+      </div>
+      <div class="center">
+        {{tran.toolbar_meditation}}
+      </div>
+      <div class="right" ng-show="isFetching">
+      </div>
+    </ons-toolbar>
+
+    <div class="details-content glass no-scroll">
+      <div class="radiobox">
+        <ons-row align="center">
+          <ons-col width="17%"></ons-col>
+          <ons-col width="66%" align="center">
+                               <audio controls="controls" style="width:70%"> 
+          <source src="media/Sammaarahang.mp3" type="audio/mp3"/> 
+        Your browser does not support the audio element. 
+    </audio>
+            <img class="rounded" style="width:50%" ng-src="{{ radioOptions.albumArt }}">
+            <ons-row align="center"  width="100%"> 
+                <p id="stream-time">{{ radio.currentTime | SecondsToTimeString }}</p>
+            </ons-row>
+            <ons-row align="center"  width="100%">
+                <p class="song-title">{{ radioOptions.songName | limitTo: 32 }}</p>
+           </ons-row>
+          </ons-col>
+          <ons-col width="17%"></ons-col>
+        </ons-row>        
+        <ons-row align="center">
+          <ons-col width="32%"></ons-col>
+          <ons-col width="36%" align="center">
+               <a href="#" id="btn-play" ng-click="startRadio()" ng-bind-html="renderHtml(buttonIcon)"><span class="ion-ios-play"></span></a>
+  
+          </ons-col>
+          <ons-col width="32%" align="center">
+               
+          </ons-col>
+        </ons-row>
+      </div>
+      <div class="bgbox">
+            <img src="images/bg.png" class="bg">
+      </div>
+    </div>
+
+  </ons-page>
+
+</ons-navigator>   
